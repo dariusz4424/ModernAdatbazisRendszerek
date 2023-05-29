@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Raktar_DB xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="Beadando_XML_Schema.xsd">
+    <Epulet eid="1">
+        <Lokacio_kod>3768</Lokacio_kod>
+        <Cim>
+            <IrSzam>8000</IrSzam>
+            <Varos>Szekesfehervar</Varos>
+            <Utca>Raktar utca</Utca>
+            <Hazszam>3</Hazszam>
+        </Cim>
+        <Salgo_polc spid="1">
+            <Sor>1</Sor>
+            <Oszlop>1</Oszlop>
+            <Pozicio pid="1">
+                <Sorszam>1</Sorszam>
+            </Pozicio>
+            <Pozicio pid="2">
+                <Sorszam>2</Sorszam>
+            </Pozicio>
+            <Pozicio pid="3">
+                <Sorszam>3</Sorszam>
+            </Pozicio>
+            <Pozicio pid="4">
+                <Sorszam>4</Sorszam>
+            </Pozicio>
+            <Pozicio pid="5">
+                <Sorszam>5</Sorszam>
+            </Pozicio>
+        </Salgo_polc>
+    </Epulet>
+    
+    <Beszallito bid="1">
+        <Nev>Fehervari 1-es pekseg</Nev>
+        <Elerhetoseg>+36 46 345 678</Elerhetoseg>
+        <Cim>
+            <IrSzam>8000</IrSzam>
+            <Varos>Szekesfehervar</Varos>
+            <Utca>Kenyersuto utca</Utca>
+            <Hazszam>3</Hazszam>
+        </Cim>
+        <Termek tid="1">
+            <Megnevezes>Kenyer</Megnevezes>
+            <Tipus>Elelmiszer</Tipus>
+            <Ar>550</Ar>
+            <Termek_Pozicio>1</Termek_Pozicio>
+        </Termek>
+        <Termek tid="2">
+            <Megnevezes>Zsemle</Megnevezes>
+            <Tipus>Elelmiszer</Tipus>
+            <Ar>50</Ar>
+            <Termek_Pozicio>1</Termek_Pozicio>
+        </Termek>
+    </Beszallito>
+    <Beszallito bid="2">
+        <Nev>Harman Becker</Nev>
+        <Elerhetoseg>+36 46 765 432</Elerhetoseg>
+        <Cim>
+            <IrSzam>8000</IrSzam>
+            <Varos>Szekesfehervar</Varos>
+            <Utca>Amerikai fasor</Utca>
+            <Hazszam>15</Hazszam>
+        </Cim>
+        <Termek tid="3">
+            <Megnevezes>Autosradio</Megnevezes>
+            <Tipus>Elektronika</Tipus>
+            <Ar>400000</Ar>
+            <Termek_Pozicio>3</Termek_Pozicio>
+        </Termek>
+        <Termek tid="4">
+            <Megnevezes>Hangszoro</Megnevezes>
+            <Tipus>Elektronika</Tipus>
+            <Ar>30000</Ar>
+            <Termek_Pozicio>4</Termek_Pozicio>
+        </Termek>
+    </Beszallito>
+
+</Raktar_DB>

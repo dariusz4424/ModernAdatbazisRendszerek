@@ -1,0 +1,39 @@
+{
+	"_id": "1",
+	"Lokacio_kod": "3768",
+	"Cim": {
+	    "IrSzam": 8000,
+	    "Varos": "Szekesfehervar",
+	    "Utca": "Raktar_utca",
+	    "Hazszam": 3
+	},
+	"Salgo_polcok":[
+	    {
+	        "spid": "1",
+	        "Sor": 1,
+	        "Oszlop": 1,
+	        "Poziciok": [
+	            {
+	                "pid": "1",
+	                "Sorszam": 1
+	            },	            
+	            {
+	                "pid": "2",
+	                "Sorszam": 2
+	            },
+	            {
+	                "pid": "3",
+	                "Sorszam": 3
+	            },
+	            {
+	                "pid": "4",
+	                "Sorszam": 4
+	            },
+	            {
+	                "pid": "5",
+	                "Sorszam": 5
+	            }
+	        ]
+	    }
+	]
+}

@@ -1,0 +1,54 @@
+{
+	"_id": "1",
+	"Nev": "Fehervari 1-es pekseg",
+	"Elerhetoseg": "+36 46 345 678",
+	"Cim": {
+	    "IrSzam": 8000,
+	    "Varos": "Szekesfehervar",
+	    "Utca": "Kenyersuto utca",
+	    "Hazszam": 3	    
+	},
+	"Termekek": [
+	    {
+	        "tid":"1",
+	        "Megnevezes": "Kenyer",
+	        "Tipus": "Elelmiszer",
+	        "Ar": 550,
+	        "Termek_Pozicio": 1
+	    },
+	    {
+	        "tid":"2",
+	        "Megnevezes": "Zsemle",
+	        "Tipus": "Elelmiszer",
+	        "Ar": 50,
+	        "Termek_Pozicio": 1
+	    }
+	]
+}
+{
+	"_id": "2",
+	"Nev": "Harman Becker",
+	"Elerhetoseg": "+36 46 764 432",
+	"Cim": {
+	    "IrSzam": 8000,
+	    "Varos": "Szekesfehervar",
+	    "Utca": "Amerikai fasor",
+	    "Hazszam": 15	    
+	},
+	"Termekek": [
+	    {
+	        "tid":"3",
+	        "Megnevezes": "Autosradio",
+	        "Tipus": "Elektronika",
+	        "Ar": 400000,
+	        "Termek_Pozicio": 3
+	    },
+	    {
+	        "tid":"4",
+	        "Megnevezes": "Hangszoro",
+	        "Tipus": "Elektronika",
+	        "Ar": 30000,
+	        "Termek_Pozicio": 4
+	    }
+	]
+}

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:element name="Raktar_DB">
+    <xs:complexType>
+        <xs:sequence>
+            
+            <!-- Epulet eleje -->
+            <xs:element name="Epulet" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        
+                        <!-- Epulet reszletei -->
+                        
+                        <xs:element name="Lokacio_kod" type="xs:int"/>
+                        <xs:element name="Cim">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="IrSzam" type="xs:int"/>
+                                    <xs:element name="Varos" type="xs:string"/>
+                                    <xs:element name="Utca" type="xs:string"/>
+                                    <xs:element name="Hazszam" type="xs:int"/>
+                                </xs:sequence>                                
+                            </xs:complexType>
+                        </xs:element>
+                        
+                        <!-- Salgo polc, Epuleten belul -->
+                        
+                        <xs:element name="Salgo_polc" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="Sor" type="xs:int"/>
+                                    <xs:element name="Oszlop" type="xs:int"/>
+                                    
+                                    <!-- Pozicio Salgo_polcon belul -->
+                                    
+                                    <xs:element name="Pozicio" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="Sorszam" type="xs:int"/>
+                                            </xs:sequence>
+                                            <xs:attribute name="pid" type="xs:string"/>
+                                        </xs:complexType>
+                                    </xs:element>                                    
+                                </xs:sequence>
+                                <xs:attribute name="spid" type="xs:string"/>
+                            </xs:complexType>
+                        </xs:element>                        
+                    </xs:sequence>
+                    <xs:attribute name="eid" type="xs:string"/>
+                </xs:complexType>
+            </xs:element>
+            <!-- Epulet vege -->
+            
+            <!-- Beszallito eleje -->
+            <xs:element name="Beszallito" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        
+                        <!-- Beszallito reszletei -->
+                        <xs:element name="Nev" type="xs:string"/>
+                        <xs:element name="Elerhetoseg" type="xs:string"/>
+                        <xs:element name="Cim">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="IrSzam" type="xs:int"/>
+                                    <xs:element name="Varos" type="xs:string"/>
+                                    <xs:element name="Utca" type="xs:string"/>
+                                    <xs:element name="Hazszam" type="xs:int"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        
+                        <!-- Termek, a Beszalliton belul -->
+                        <xs:element name="Termek" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="Megnevezes" type="xs:string"/>
+                                    <xs:element name="Tipus" type="xs:string"/>
+                                    <xs:element name="Ar" type="xs:int"/>
+                                    
+                                    <!-- Termek pozicio, Termeken belul -->
+                                    <xs:element name="Termek_Pozicio" type="xs:int"/>
+                                </xs:sequence>
+                                <xs:attribute name="tid" type="xs:string"/>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                    <xs:attribute name="bid" type="xs:string"/>
+                </xs:complexType>
+            </xs:element>
+            <!-- Beszallito vege -->
+            
+        </xs:sequence>
+    </xs:complexType>
+    
+    <!-- Primary Keyek-->
+    <!-- eid -->
+    <xs:key name="PK_eid">
+        <xs:selector xpath="Epulet"/>
+        <xs:field xpath="@eid"/>
+    </xs:key>
+    <!-- spid -->
+    <xs:key name="PK_spid">
+        <xs:selector xpath="Epulet/Salgo_polc"/>
+        <xs:field xpath="@spid"/>
+    </xs:key>
+    <!-- pid -->
+    <xs:key name="PK_pid">
+        <xs:selector xpath="Epulet/Salgo_polc/Pozicio"/>
+        <xs:field xpath="@pid"/>
+    </xs:key>
+    <!-- bid -->
+    <xs:key name="PK_bid">
+        <xs:selector xpath="Beszallito"/>
+        <xs:field xpath="@bid"/>
+    </xs:key>
+    <!-- bid -->
+    <xs:key name="PK_tid">
+        <xs:selector xpath="Beszallito/Termek"/>
+        <xs:field xpath="@tid"/>
+    </xs:key>
+    
+    <!-- Foreign Key -->
+    <!-- Termek_Pozicio -->
+    <xs:keyref refer="PK_pid" name="FK_TPoz">
+        <xs:selector xpath="Beszallito/Termek"></xs:selector>
+        <xs:field xpath="Beszallito/Termek/Termek_Pozicio"></xs:field>
+    </xs:keyref>
+</xs:element>
+</xs:schema>
